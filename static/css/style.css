@@ -46,6 +46,33 @@ body {
     padding: .5rem .75rem;
 }
 
+/* Ao clicar num link com #, a seção não fica escondida atrás do menu fixo */
+section[id] {
+    scroll-margin-top: 70px;
+}
+
 .hero {
     background: linear-gradient(135deg, #eef3ff 0%, var(--sp-fundo) 100%);
+}
+
+.hero-art {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, #dbe6ff 0%, #f1f5ff 100%);
+}
+
+.hero-art i {
+    font-size: 8rem;
+}
+
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 88, 202, .1);
+    color: var(--sp-azul);
+    font-size: 1.75rem;
+    font-weight: bold;
 }

@@ -3,10 +3,128 @@
 {% block title %}Início · StudyPlan{% endblock %}
 
 {% block content %}
+<!-- Apresentação -->
 <section class="hero py-5">
-    <div class="container py-lg-5 text-center">
-        <h1 class="display-5 fw-bold mb-3">StudyPlan</h1>
-        <p class="lead text-body-secondary mb-0">Página inicial em construção.</p>
+    <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill px-3 py-2 mb-3">
+                    Para alunos da faculdade
+                </span>
+                <h1 class="display-5 fw-bold mb-3">Saiba o que revisar antes de cada prova</h1>
+                <p class="lead text-body-secondary mb-4">
+                    Registre seus estudos, acompanhe o seu aproveitamento em cada matéria
+                    e descubra onde precisa focar.
+                </p>
+                <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-lg-start">
+                    <a href="#como-funciona" class="btn btn-primary btn-lg px-4">Como funciona</a>
+                    <a href="#exemplo" class="btn btn-outline-primary btn-lg px-4">Ver um exemplo</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="hero-art rounded-4 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-journal-check text-primary" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefícios -->
+<section class="py-4 border-top border-bottom bg-white">
+    <div class="container">
+        <div class="row text-center g-3">
+            <div class="col-md-4">
+                <i class="bi bi-stopwatch fs-3 text-primary" aria-hidden="true"></i>
+                <p class="mb-0 fw-semibold">Registro em menos de 1 minuto</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-bar-chart fs-3 text-primary" aria-hidden="true"></i>
+                <p class="mb-0 fw-semibold">Seu % de acerto por matéria</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-list-check fs-3 text-primary" aria-hidden="true"></i>
+                <p class="mb-0 fw-semibold">Lista do que revisar</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Como funciona -->
+<section id="como-funciona" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-1">Como funciona</h2>
+            <p class="text-body-secondary mb-0">Três passos simples para estudar com mais foco.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+                    <div class="icon-circle mx-auto mb-3">1</div>
+                    <h3 class="fs-5 fw-bold">Cadastre suas matérias</h3>
+                    <p class="text-body-secondary mb-0">Informe as disciplinas do semestre e a data de cada prova.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+                    <div class="icon-circle mx-auto mb-3">2</div>
+                    <h3 class="fs-5 fw-bold">Registre cada estudo</h3>
+                    <p class="text-body-secondary mb-0">Anote o tempo, o assunto, os exercícios feitos e quantos você acertou.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-3">
+                    <div class="icon-circle mx-auto mb-3">3</div>
+                    <h3 class="fs-5 fw-bold">Veja o que revisar</h3>
+                    <p class="text-body-secondary mb-0">O StudyPlan mostra as matérias com acerto abaixo de 70% e as provas mais próximas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Exemplo de resultado -->
+<section id="exemplo" class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold mb-1">Um exemplo do que você vai ver</h2>
+            <p class="text-body-secondary mb-0">O resumo de um aluno depois de duas semanas usando o StudyPlan.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <caption class="caption-top">Aproveitamento por matéria</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Matéria</th>
+                        <th scope="col">Horas estudadas</th>
+                        <th scope="col">Acerto</th>
+                        <th scope="col">Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Probabilidade e Estatística</td>
+                        <td>6 h</td>
+                        <td>58%</td>
+                        <td><span class="badge bg-danger-subtle text-danger-emphasis">Revisar</span></td>
+                    </tr>
+                    <tr>
+                        <td>Laboratório de Programação III</td>
+                        <td>4 h</td>
+                        <td>72%</td>
+                        <td><span class="badge bg-warning-subtle text-warning-emphasis">Atenção</span></td>
+                    </tr>
+                    <tr>
+                        <td>Interação Humano-Computador</td>
+                        <td>5 h</td>
+                        <td>85%</td>
+                        <td><span class="badge bg-success-subtle text-success-emphasis">Em dia</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 {% endblock %}
