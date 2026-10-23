@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Criar conta · StudyPlan{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-7 col-lg-5">
+                <div class="card border-0 shadow-sm p-4">
+                    <h1 class="fs-3 fw-bold mb-1">Criar conta</h1>
+                    <p class="text-body-secondary mb-4">Leva menos de um minuto.</p>
+
+                    <form action="{{ url_for('painel') }}" method="get">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" id="nome" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" id="senha" class="form-control" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="confirmar-senha" class="form-label">Confirmar senha</label>
+                            <input type="password" id="confirmar-senha" class="form-control" required>
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <button type="submit" class="btn btn-primary flex-grow-1">Criar conta</button>
+                            <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                        </div>
+                    </form>
+
+                    <p class="text-center text-body-secondary mt-4 mb-0">
+                        Já tem conta? <a href="{{ url_for('entrar') }}">Entrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -32,6 +32,9 @@ templates/base.html      estrutura comum a todas as páginas
 templates/_partials/     menu (navbar) e rodapé (footer)
 templates/home.html      página inicial
 templates/about.html     página Sobre
+templates/entrar.html    formulário de entrada (e-mail e senha)
+templates/cadastro.html  formulário de criação de conta
+templates/painel.html    painel do aluno (em construção)
 static/css/style.css     cores e estilos próprios
 static/img/logo.svg      logo do StudyPlan
 ```

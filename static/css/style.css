@@ -46,6 +46,11 @@ body {
     padding: .5rem .75rem;
 }
 
+.form-control {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+}
+
 /* Ao clicar num link com #, a seção não fica escondida atrás do menu fixo */
 section[id] {
     scroll-margin-top: 70px;

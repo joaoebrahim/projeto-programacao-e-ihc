@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar · StudyPlan{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-7 col-lg-5">
+                <div class="card border-0 shadow-sm p-4">
+                    <h1 class="fs-3 fw-bold mb-1">Entrar</h1>
+                    <p class="text-body-secondary mb-4">Acesse o seu plano de estudos.</p>
+
+                    <form action="{{ url_for('painel') }}" method="get">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" id="senha" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </form>
+
+                    <p class="text-center text-body-secondary mt-4 mb-0">
+                        Ainda não tem conta? <a href="{{ url_for('cadastro') }}">Criar conta</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
