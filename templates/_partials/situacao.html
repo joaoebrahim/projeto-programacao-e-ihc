@@ -1,0 +1,9 @@
+{% if materia.horas == 0 %}
+<span class="badge text-wrap bg-secondary-subtle text-secondary-emphasis">Sem registros</span>
+{% elif materia.acerto < 70 %}
+<span class="badge text-wrap bg-danger-subtle text-danger-emphasis">Revisar</span>
+{% elif materia.acerto < 80 %}
+<span class="badge text-wrap bg-warning-subtle text-warning-emphasis">Atenção</span>
+{% else %}
+<span class="badge text-wrap bg-success-subtle text-success-emphasis">Em dia</span>
+{% endif %}
