@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar estudo · StudyPlan</title>
+    <link rel="icon" href="/projeto-programacao-e-ihc/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/projeto-programacao-e-ihc/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a href="#conteudo" class="visually-hidden-focusable bg-white p-3">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/projeto-programacao-e-ihc/">
+            <img src="/projeto-programacao-e-ihc/img/logo.svg" alt="" width="32" height="32"> StudyPlan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/painel">Painel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/materias">Matérias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"
+                        aria-current="page"
+                        href="/projeto-programacao-e-ihc/registrar">Registrar estudo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/sobre">Sobre</a>
+                </li>
+            </ul>
+            <a href="/projeto-programacao-e-ihc/entrar" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">
+                <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Entrar
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <main id="conteudo" class="flex-grow-1">
+        
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <h1 class="fw-bold mb-1">Registrar estudo</h1>
+                <p class="text-body-secondary mb-4">Anote o que você estudou hoje. Os campos com * são obrigatórios.</p>
+
+                
+                <div class="alert alert-success" role="alert">
+                    <h2 class="fs-5 fw-bold mb-1"><i class="bi bi-check-circle" aria-hidden="true"></i> Estudo registrado!</h2>
+                    <p class="mb-2">Continue assim. Você pode registrar outro estudo ou ver as suas matérias.</p>
+                    <a href="/projeto-programacao-e-ihc/materias" class="alert-link">Ver minhas matérias</a>
+                </div>
+                
+
+                <div class="card p-4">
+                    <form id="form-registro" action="/projeto-programacao-e-ihc/registrar-enviado" method="get" onsubmit="return mostrarCarregando()">
+                        <div class="mb-3">
+                            <label for="materia" class="form-label">Matéria *</label>
+                            <select id="materia" class="form-select" required>
+                                <option value="">Escolha a matéria</option>
+                                
+                                <option value="1">Probabilidade e Estatística</option>
+                                
+                                <option value="2">Laboratório de Programação III</option>
+                                
+                                <option value="3">Interação Humano-Computador</option>
+                                
+                                <option value="4">Arquitetura de Computadores</option>
+                                
+                                <option value="5">Empreendedorismo</option>
+                                
+                            </select>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-sm-6">
+                                <label for="data" class="form-label">Data *</label>
+                                <input type="date" id="data" class="form-control" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="tempo" class="form-label">Tempo (minutos) *</label>
+                                <input type="number" id="tempo" class="form-control" min="1" max="600" placeholder="Ex.: 90" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="assunto" class="form-label">Assunto *</label>
+                            <input type="text" id="assunto" class="form-control" placeholder="Ex.: Desvio padrão" required>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-sm-6">
+                                <label for="exercicios" class="form-label">Exercícios feitos *</label>
+                                <input type="number" id="exercicios" class="form-control" min="0" max="500" placeholder="Ex.: 10" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="acertos" class="form-label">Exercícios certos *</label>
+                                <input type="number" id="acertos" class="form-control" min="0" max="500" placeholder="Ex.: 7" required aria-describedby="dica-acertos">
+                                <div id="dica-acertos" class="form-text">Não pode ser maior que os exercícios feitos.</div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="observacoes" class="form-label">Observações</label>
+                            <textarea id="observacoes" class="form-control" rows="3" placeholder="Dúvidas ou o que revisar depois"></textarea>
+                        </div>
+                        <div id="carregando" class="alert alert-info" role="status">
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            Salvando o seu estudo, aguarde...
+                        </div>
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <button type="submit" id="botao-registrar" class="btn btn-primary flex-grow-1">Registrar estudo</button>
+                            <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="bg-dark text-white-50 py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>StudyPlan · site open source (licença MIT) · 2026</span>
+        <span>Projeto de Programação e IHC · CESMAC</span>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/projeto-programacao-e-ihc/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+/* ===== Design system do StudyPlan ===== */
+
+/* Cores (contraste mínimo de 4.5:1 conferido) */
+:root {
+    --sp-azul: #0a58ca;
+    --sp-azul-escuro: #084298;
+    --sp-fundo: #f2f4f7;
+    --sp-borda: #c9ced6;
+
+    /* Fonte sem serifa */
+    --sp-fonte: Arial, Helvetica, sans-serif;
+
+    /* Faz o Bootstrap usar o nosso azul */
+    --bs-primary: var(--sp-azul);
+    --bs-primary-rgb: 10, 88, 202;
+    --bs-link-color-rgb: 10, 88, 202;
+
+    /* Cantos retos em botões, campos, caixas e selos */
+    --bs-border-radius: 0;
+    --bs-border-color: var(--sp-borda);
+}
+
+body {
+    background-color: var(--sp-fundo);
+    font-family: var(--sp-fonte);
+}
+
+/* Escala de títulos */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Título de seção com uma linha azul embaixo */
+.titulo-secao {
+    border-bottom: 3px solid var(--sp-azul);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+/* Faixa azul do topo das páginas Início e Sobre */
+.topo {
+    background-color: var(--sp-azul);
+    color: #ffffff;
+}
+
+/* Botões */
+.btn-primary {
+    --bs-btn-bg: var(--sp-azul);
+    --bs-btn-border-color: var(--sp-azul);
+    --bs-btn-hover-bg: var(--sp-azul-escuro);
+    --bs-btn-hover-border-color: var(--sp-azul-escuro);
+    --bs-btn-active-bg: var(--sp-azul-escuro);
+    --bs-btn-active-border-color: var(--sp-azul-escuro);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--sp-azul);
+    --bs-btn-border-color: var(--sp-azul);
+    --bs-btn-hover-bg: var(--sp-azul);
+    --bs-btn-hover-border-color: var(--sp-azul);
+    --bs-btn-active-bg: var(--sp-azul-escuro);
+    --bs-btn-active-border-color: var(--sp-azul-escuro);
+}
+
+/* Área de toque mínima de 44px em botões, links do menu e campos */
+.btn {
+    --bs-btn-padding-y: .625rem;
+}
+
+.navbar-nav .nav-link {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+}
+
+.navbar-toggler {
+    padding: .5rem .75rem;
+}
+
+.form-control,
+.form-select {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+}
+
+/* Página atual no menu */
+.navbar-nav .nav-link.active {
+    color: var(--sp-azul);
+    font-weight: bold;
+}
+
+/* Foco bem visível para quem navega pelo teclado (Tab) */
+a:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* Ao clicar num link com #, a seção não fica escondida atrás do menu fixo */
+section[id] {
+    scroll-margin-top: 70px;
+}
+
+/* Aviso "carregando" do formulário: começa escondido */
+#carregando {
+    display: none;
+}

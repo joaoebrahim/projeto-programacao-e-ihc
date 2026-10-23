@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas matérias · StudyPlan</title>
+    <link rel="icon" href="/projeto-programacao-e-ihc/img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/projeto-programacao-e-ihc/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <a href="#conteudo" class="visually-hidden-focusable bg-white p-3">Pular para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/projeto-programacao-e-ihc/">
+            <img src="/projeto-programacao-e-ihc/img/logo.svg" alt="" width="32" height="32"> StudyPlan
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/painel">Painel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"
+                        aria-current="page"
+                        href="/projeto-programacao-e-ihc/materias">Matérias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/registrar">Registrar estudo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        
+                        href="/projeto-programacao-e-ihc/sobre">Sobre</a>
+                </li>
+            </ul>
+            <a href="/projeto-programacao-e-ihc/entrar" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">
+                <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i> Entrar
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <main id="conteudo" class="flex-grow-1">
+        
+<section class="py-5">
+    <div class="container">
+        <div class="mb-4">
+            <h1 class="fw-bold mb-1">Minhas matérias</h1>
+            <p class="text-body-secondary mb-0">Acompanhe o seu aproveitamento em cada disciplina do semestre.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-body p-2 p-sm-3">
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle mb-0">
+                        <caption class="caption-top">Aproveitamento por matéria</caption>
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col">Matéria</th>
+                                <th scope="col" class="d-none d-md-table-cell">Professor(a)</th>
+                                <th scope="col" class="d-none d-md-table-cell">Próxima prova</th>
+                                <th scope="col" class="d-none d-md-table-cell">Horas</th>
+                                <th scope="col">Acerto</th>
+                                <th scope="col">Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="/projeto-programacao-e-ihc/materia/1">Probabilidade e Estatística</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">Prof. Marcos Lima</td>
+                                <td class="d-none d-md-table-cell">05/11/2026</td>
+                                <td class="d-none d-md-table-cell">6 h</td>
+                                <td>
+                                    
+                                    58%
+                                    
+                                </td>
+                                <td>
+<span class="badge text-wrap bg-danger-subtle text-danger-emphasis">Revisar</span>
+</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="/projeto-programacao-e-ihc/materia/2">Laboratório de Programação III</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">Profa. Carla Mendes</td>
+                                <td class="d-none d-md-table-cell">12/11/2026</td>
+                                <td class="d-none d-md-table-cell">4 h</td>
+                                <td>
+                                    
+                                    72%
+                                    
+                                </td>
+                                <td>
+<span class="badge text-wrap bg-warning-subtle text-warning-emphasis">Atenção</span>
+</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="/projeto-programacao-e-ihc/materia/3">Interação Humano-Computador</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">Prof. Rafael Costa</td>
+                                <td class="d-none d-md-table-cell">19/11/2026</td>
+                                <td class="d-none d-md-table-cell">5 h</td>
+                                <td>
+                                    
+                                    85%
+                                    
+                                </td>
+                                <td>
+<span class="badge text-wrap bg-success-subtle text-success-emphasis">Em dia</span>
+</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="/projeto-programacao-e-ihc/materia/4">Arquitetura de Computadores</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">Prof. André Souza</td>
+                                <td class="d-none d-md-table-cell">26/11/2026</td>
+                                <td class="d-none d-md-table-cell">3 h</td>
+                                <td>
+                                    
+                                    84%
+                                    
+                                </td>
+                                <td>
+<span class="badge text-wrap bg-success-subtle text-success-emphasis">Em dia</span>
+</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="/projeto-programacao-e-ihc/materia/5">Empreendedorismo</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">Profa. Beatriz Nunes</td>
+                                <td class="d-none d-md-table-cell">03/12/2026</td>
+                                <td class="d-none d-md-table-cell">0 h</td>
+                                <td>
+                                    
+                                    —
+                                    
+                                </td>
+                                <td>
+<span class="badge text-wrap bg-secondary-subtle text-secondary-emphasis">Sem registros</span>
+</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <p class="small text-body-secondary mt-3 mb-0">
+                    Revisar: acerto abaixo de 70% · Atenção: de 70% a 79% · Em dia: 80% ou mais
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer class="bg-dark text-white-50 py-4 mt-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <span>StudyPlan · site open source (licença MIT) · 2026</span>
+        <span>Projeto de Programação e IHC · CESMAC</span>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/projeto-programacao-e-ihc/js/script.js"></script>
+</body>
+
+</html>
