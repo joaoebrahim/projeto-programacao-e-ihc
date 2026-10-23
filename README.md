@@ -31,6 +31,7 @@ main.py                  rotas do site
 templates/base.html      estrutura comum a todas as páginas
 templates/_partials/     menu (navbar) e rodapé (footer)
 templates/home.html      página inicial
+templates/about.html     página Sobre
 static/css/style.css     cores e estilos próprios
 static/img/logo.svg      logo do StudyPlan
 ```

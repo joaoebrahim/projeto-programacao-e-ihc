@@ -9,3 +9,7 @@ app = Flask(__name__,
 @app.get("/")
 def home():
     return render_template("home.html")
+
+@app.get("/sobre")
+def about():
+    return render_template("about.html")

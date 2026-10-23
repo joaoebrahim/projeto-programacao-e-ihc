@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Sobre · StudyPlan{% endblock %}
+
+{% block content %}
+<!-- Cabeçalho -->
+<section class="hero py-5 text-center">
+    <div class="container py-lg-4">
+        <h1 class="display-5 fw-bold mb-3">Sobre o StudyPlan</h1>
+        <p class="lead text-body-secondary mx-auto" style="max-width: 640px;">
+            Um organizador de estudos feito para ajudar alunos da faculdade a estudar
+            com foco e chegar mais preparados às provas.
+        </p>
+    </div>
+</section>
+
+<!-- O problema -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="hero-art rounded-4 d-flex align-items-center justify-content-center">
+                    <i class="bi bi-question-diamond text-primary" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-3">Por que o StudyPlan existe</h2>
+                <p class="text-body-secondary">
+                    Durante o semestre, o aluno estuda várias matérias ao mesmo tempo. Sem
+                    acompanhar o próprio desempenho, muita gente só descobre o que não aprendeu
+                    no dia da prova.
+                </p>
+                <ul class="list-unstyled text-body-secondary mb-0">
+                    <li class="mb-2"><i class="bi bi-x-circle text-danger me-2" aria-hidden="true"></i>Estuda sem saber se está aprendendo</li>
+                    <li class="mb-2"><i class="bi bi-x-circle text-danger me-2" aria-hidden="true"></i>Não sabe quanto tempo dedicou a cada matéria</li>
+                    <li><i class="bi bi-x-circle text-danger me-2" aria-hidden="true"></i>Deixa para revisar tudo na véspera</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Princípios -->
+<section class="py-5 bg-white border-top border-bottom">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Nossos princípios</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 text-center p-3">
+                    <div class="icon-circle mx-auto mb-3"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i></div>
+                    <h3 class="fs-5 fw-bold">Simples</h3>
+                    <p class="text-body-secondary mb-0">Registrar um estudo leva menos de um minuto. Só pedimos o necessário.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 text-center p-3">
+                    <div class="icon-circle mx-auto mb-3"><i class="bi bi-eye" aria-hidden="true"></i></div>
+                    <h3 class="fs-5 fw-bold">Claro</h3>
+                    <p class="text-body-secondary mb-0">Você vê o seu desempenho em números e em palavras: revisar, atenção ou em dia.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 text-center p-3">
+                    <div class="icon-circle mx-auto mb-3"><i class="bi bi-universal-access" aria-hidden="true"></i></div>
+                    <h3 class="fs-5 fw-bold">Acessível</h3>
+                    <p class="text-body-secondary mb-0">Cores com bom contraste, botões fáceis de tocar e funciona no celular.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quem fez -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3">Quem fez</h2>
+        <p class="text-body-secondary mx-auto mb-4" style="max-width: 640px;">
+            O StudyPlan foi desenvolvido por João Ebrahim, aluno do CESMAC, como projeto das
+            disciplinas de Laboratório de Programação III e Interação Humano-Computador (2026.2).
+        </p>
+        <a href="https://github.com/joaoebrahim/projeto-programacao-e-ihc" class="btn btn-primary btn-lg">
+            <i class="bi bi-github" aria-hidden="true"></i> Ver o código no GitHub
+        </a>
+    </div>
+</section>
+{% endblock %}
