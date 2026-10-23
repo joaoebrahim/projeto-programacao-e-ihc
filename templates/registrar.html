@@ -18,8 +18,8 @@
                 </div>
                 {% endif %}
 
-                <div class="card border-0 shadow-sm p-4">
-                    <form action="{{ url_for('registrar_enviar') }}" method="post">
+                <div class="card p-4">
+                    <form id="form-registro" action="{{ url_for('registrar_enviar') }}" method="post" onsubmit="return mostrarCarregando()">
                         <div class="mb-3">
                             <label for="materia" class="form-label">Matéria *</label>
                             <select id="materia" class="form-select" required>
@@ -50,15 +50,20 @@
                             </div>
                             <div class="col-sm-6">
                                 <label for="acertos" class="form-label">Exercícios certos *</label>
-                                <input type="number" id="acertos" class="form-control" min="0" max="500" placeholder="Ex.: 7" required>
+                                <input type="number" id="acertos" class="form-control" min="0" max="500" placeholder="Ex.: 7" required aria-describedby="dica-acertos">
+                                <div id="dica-acertos" class="form-text">Não pode ser maior que os exercícios feitos.</div>
                             </div>
                         </div>
                         <div class="mb-4">
                             <label for="observacoes" class="form-label">Observações</label>
                             <textarea id="observacoes" class="form-control" rows="3" placeholder="Dúvidas ou o que revisar depois"></textarea>
                         </div>
+                        <div id="carregando" class="alert alert-info" role="status">
+                            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                            Salvando o seu estudo, aguarde...
+                        </div>
                         <div class="d-flex flex-column flex-sm-row gap-2">
-                            <button type="submit" class="btn btn-primary flex-grow-1">Registrar estudo</button>
+                            <button type="submit" id="botao-registrar" class="btn btn-primary flex-grow-1">Registrar estudo</button>
                             <button type="reset" class="btn btn-outline-secondary">Limpar</button>
                         </div>
                     </form>

@@ -1,19 +1,57 @@
-/* Cores do StudyPlan (contraste mínimo de 4.5:1 conferido) */
+/* ===== Design system do StudyPlan ===== */
+
+/* Cores (contraste mínimo de 4.5:1 conferido) */
 :root {
     --sp-azul: #0a58ca;
     --sp-azul-escuro: #084298;
-    --sp-fundo: #f8f9fb;
+    --sp-fundo: #f2f4f7;
+    --sp-borda: #c9ced6;
+
+    /* Fonte sem serifa */
+    --sp-fonte: Arial, Helvetica, sans-serif;
 
     /* Faz o Bootstrap usar o nosso azul */
     --bs-primary: var(--sp-azul);
     --bs-primary-rgb: 10, 88, 202;
     --bs-link-color-rgb: 10, 88, 202;
+
+    /* Cantos retos em botões, campos, caixas e selos */
+    --bs-border-radius: 0;
+    --bs-border-color: var(--sp-borda);
 }
 
 body {
     background-color: var(--sp-fundo);
+    font-family: var(--sp-fonte);
 }
 
+/* Escala de títulos */
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+/* Título de seção com uma linha azul embaixo */
+.titulo-secao {
+    border-bottom: 3px solid var(--sp-azul);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+/* Faixa azul do topo das páginas Início e Sobre */
+.topo {
+    background-color: var(--sp-azul);
+    color: #ffffff;
+}
+
+/* Botões */
 .btn-primary {
     --bs-btn-bg: var(--sp-azul);
     --bs-btn-border-color: var(--sp-azul);
@@ -32,7 +70,7 @@ body {
     --bs-btn-active-border-color: var(--sp-azul-escuro);
 }
 
-/* Área de toque mínima de 44px em botões e links do menu */
+/* Área de toque mínima de 44px em botões, links do menu e campos */
 .btn {
     --bs-btn-padding-y: .625rem;
 }
@@ -52,33 +90,30 @@ body {
     padding-bottom: .625rem;
 }
 
+/* Página atual no menu */
+.navbar-nav .nav-link.active {
+    color: var(--sp-azul);
+    font-weight: bold;
+}
+
+/* Foco bem visível para quem navega pelo teclado (Tab) */
+a:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
 /* Ao clicar num link com #, a seção não fica escondida atrás do menu fixo */
 section[id] {
     scroll-margin-top: 70px;
 }
 
-.hero {
-    background: linear-gradient(135deg, #eef3ff 0%, var(--sp-fundo) 100%);
-}
-
-.hero-art {
-    aspect-ratio: 4 / 3;
-    background: linear-gradient(135deg, #dbe6ff 0%, #f1f5ff 100%);
-}
-
-.hero-art i {
-    font-size: 8rem;
-}
-
-.icon-circle {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(10, 88, 202, .1);
-    color: var(--sp-azul);
-    font-size: 1.75rem;
-    font-weight: bold;
+/* Aviso "carregando" do formulário: começa escondido */
+#carregando {
+    display: none;
 }

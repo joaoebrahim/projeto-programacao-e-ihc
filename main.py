@@ -47,9 +47,21 @@ materias = [
     },
     {
         "id": 4,
-        "nome": "Banco de Dados",
-        "professor": "Profa. Juliana Rocha",
+        "nome": "Arquitetura de Computadores",
+        "professor": "Prof. André Souza",
         "prova": "26/11/2026",
+        "horas": 3,
+        "acerto": 84,
+        "sessoes": [
+            {"data": "17/10/2026", "assunto": "Sistemas de numeração", "tempo": "2 h", "exercicios": 10, "acertos": 9},
+            {"data": "23/10/2026", "assunto": "Portas lógicas", "tempo": "1 h", "exercicios": 15, "acertos": 12},
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Empreendedorismo",
+        "professor": "Profa. Beatriz Nunes",
+        "prova": "03/12/2026",
         "horas": 0,
         "acerto": 0,
         "sessoes": []
@@ -57,8 +69,8 @@ materias = [
 ]
 
 resumo = {
-    "horas": 15,
-    "acerto": 69,
+    "horas": 18,
+    "acerto": 73,
     "prova_data": "05/11/2026",
     "prova_materia": "Probabilidade e Estatística"
 }

@@ -27,13 +27,13 @@
         <!-- Resumo -->
         <div class="row g-3 mb-5">
             <div class="col-sm-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card h-100 p-3">
                     <p class="text-body-secondary small mb-1">Horas estudadas</p>
                     <p class="fs-3 fw-bold mb-0">{{ materia.horas }} h</p>
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card h-100 p-3">
                     <p class="text-body-secondary small mb-1">Acerto</p>
                     <p class="fs-3 fw-bold mb-0">
                         {% if materia.horas == 0 %}—{% else %}{{ materia.acerto }}%{% endif %}
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card h-100 border-0 shadow-sm p-3">
+                <div class="card h-100 p-3">
                     <p class="text-body-secondary small mb-1">Próxima prova</p>
                     <p class="fs-3 fw-bold mb-0">{{ materia.prova }}</p>
                 </div>
@@ -49,12 +49,12 @@
         </div>
 
         <!-- Histórico -->
-        <h2 class="fs-4 fw-bold mb-3">Histórico de estudos</h2>
-        <div class="card border-0 shadow-sm">
+        <h2 class="titulo-secao fw-bold">Histórico de estudos</h2>
+        <div class="card">
             <div class="card-body p-2 p-sm-3">
                 <div class="table-responsive">
-                    <table class="table align-middle mb-0">
-                        <thead>
+                    <table class="table table-bordered align-middle mb-0">
+                        <thead class="table-light">
                             <tr>
                                 <th scope="col">Data</th>
                                 <th scope="col">Assunto</th>

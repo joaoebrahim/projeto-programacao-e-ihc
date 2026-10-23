@@ -2,7 +2,7 @@
 
 Projeto da disciplina de Programação e IHC — CESMAC.
 
-O StudyPlan é um organizador de estudos para alunos da faculdade. O aluno cadastra as
+O StudyPlan é um site open source para alunos se organizarem. O aluno cadastra as
 matérias, registra cada sessão de estudo (tempo, exercícios feitos e acertos) e vê o
 que precisa revisar antes das provas.
 
@@ -34,7 +34,7 @@ Depois abra http://127.0.0.1:5000 no navegador.
 | Criar conta | `/cadastro` |
 | Painel | `/painel` |
 | Minhas matérias | `/materias` |
-| Detalhe da matéria | `/materia/1` (1 a 4) |
+| Detalhe da matéria | `/materia/1` (1 a 5) |
 | Registrar estudo | `/registrar` |
 
 Nesta versão os dados ficam numa lista no `main.py` e os formulários ainda não salvam
@@ -55,5 +55,10 @@ templates/materias.html  tabela com as matérias e o aproveitamento
 templates/materia.html   detalhe da matéria com o histórico de estudos
 templates/registrar.html formulário para registrar um estudo
 static/css/style.css     cores e estilos próprios
+static/js/script.js      aviso "carregando" do formulário Registrar estudo
 static/img/logo.svg      logo do StudyPlan
 ```
+
+## Licença
+
+Código aberto sob a licença MIT (veja o arquivo `LICENSE`).
