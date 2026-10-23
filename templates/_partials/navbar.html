@@ -15,7 +15,7 @@
                         href="{{ url_for('home') }}">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'minhas_materias' %}active{% endif %}"
+                    <a class="nav-link {% if request.endpoint in ['minhas_materias', 'materia'] %}active{% endif %}"
                         {% if request.endpoint == 'minhas_materias' %}aria-current="page"{% endif %}
                         href="{{ url_for('minhas_materias') }}">Matérias</a>
                 </li>

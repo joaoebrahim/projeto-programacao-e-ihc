@@ -28,7 +28,9 @@
                         <tbody>
                             {% for materia in materias %}
                             <tr>
-                                <td class="fw-semibold">{{ materia.nome }}</td>
+                                <td class="fw-semibold">
+                                    <a href="{{ url_for('materia', id=materia.id) }}">{{ materia.nome }}</a>
+                                </td>
                                 <td class="d-none d-md-table-cell">{{ materia.professor }}</td>
                                 <td class="d-none d-md-table-cell">{{ materia.prova }}</td>
                                 <td>{{ materia.horas }} h</td>
