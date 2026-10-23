@@ -87,3 +87,11 @@ def materia(id):
     if materia is None:
         abort(404)
     return render_template("materia.html", materia=materia)
+
+@app.get("/registrar")
+def registrar():
+    return render_template("registrar.html", materias=materias)
+
+@app.post("/registrar")
+def registrar_enviar():
+    return render_template("registrar.html", materias=materias, sucesso=True)

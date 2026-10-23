@@ -20,6 +20,11 @@
                         href="{{ url_for('minhas_materias') }}">Matérias</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {% if request.endpoint in ['registrar', 'registrar_enviar'] %}active{% endif %}"
+                        {% if request.endpoint in ['registrar', 'registrar_enviar'] %}aria-current="page"{% endif %}
+                        href="{{ url_for('registrar') }}">Registrar estudo</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {% if request.endpoint == 'about' %}active{% endif %}"
                         {% if request.endpoint == 'about' %}aria-current="page"{% endif %}
                         href="{{ url_for('about') }}">Sobre</a>

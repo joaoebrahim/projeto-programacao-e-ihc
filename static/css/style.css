@@ -46,7 +46,8 @@ body {
     padding: .5rem .75rem;
 }
 
-.form-control {
+.form-control,
+.form-select {
     padding-top: .625rem;
     padding-bottom: .625rem;
 }
