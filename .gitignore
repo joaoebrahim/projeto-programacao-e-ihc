@@ -1,2 +1,8 @@
 CLAUDE.md
 .claude/
+materiais/
+contexto-disciplina.md
+
+# Python
+__pycache__/
+.venv/

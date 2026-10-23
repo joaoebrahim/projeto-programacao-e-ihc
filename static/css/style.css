@@ -1,0 +1,51 @@
+/* Cores do StudyPlan (contraste mínimo de 4.5:1 conferido) */
+:root {
+    --sp-azul: #0a58ca;
+    --sp-azul-escuro: #084298;
+    --sp-fundo: #f8f9fb;
+
+    /* Faz o Bootstrap usar o nosso azul */
+    --bs-primary: var(--sp-azul);
+    --bs-primary-rgb: 10, 88, 202;
+    --bs-link-color-rgb: 10, 88, 202;
+}
+
+body {
+    background-color: var(--sp-fundo);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--sp-azul);
+    --bs-btn-border-color: var(--sp-azul);
+    --bs-btn-hover-bg: var(--sp-azul-escuro);
+    --bs-btn-hover-border-color: var(--sp-azul-escuro);
+    --bs-btn-active-bg: var(--sp-azul-escuro);
+    --bs-btn-active-border-color: var(--sp-azul-escuro);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--sp-azul);
+    --bs-btn-border-color: var(--sp-azul);
+    --bs-btn-hover-bg: var(--sp-azul);
+    --bs-btn-hover-border-color: var(--sp-azul);
+    --bs-btn-active-bg: var(--sp-azul-escuro);
+    --bs-btn-active-border-color: var(--sp-azul-escuro);
+}
+
+/* Área de toque mínima de 44px em botões e links do menu */
+.btn {
+    --bs-btn-padding-y: .625rem;
+}
+
+.navbar-nav .nav-link {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+}
+
+.navbar-toggler {
+    padding: .5rem .75rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #eef3ff 0%, var(--sp-fundo) 100%);
+}
