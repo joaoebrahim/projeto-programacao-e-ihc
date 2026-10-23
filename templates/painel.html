@@ -3,10 +3,88 @@
 {% block title %}Painel · StudyPlan{% endblock %}
 
 {% block content %}
-<section class="hero py-5">
-    <div class="container py-lg-5 text-center">
-        <h1 class="display-5 fw-bold mb-3">Painel</h1>
-        <p class="lead text-body-secondary mb-0">Página em construção. Aqui vai aparecer o resumo dos seus estudos.</p>
+<section class="py-5">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+            <div>
+                <h1 class="fw-bold mb-1">Olá, estudante!</h1>
+                <p class="text-body-secondary mb-0">Este é o resumo dos seus estudos no semestre.</p>
+            </div>
+            <a href="{{ url_for('registrar') }}" class="btn btn-primary">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i> Registrar estudo
+            </a>
+        </div>
+
+        <!-- Resumo -->
+        <div class="row g-3 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <p class="text-body-secondary small mb-1"><i class="bi bi-stopwatch text-primary" aria-hidden="true"></i> Horas estudadas</p>
+                    <p class="fs-3 fw-bold mb-0">{{ resumo.horas }} h</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <p class="text-body-secondary small mb-1"><i class="bi bi-bar-chart text-primary" aria-hidden="true"></i> Acerto geral</p>
+                    <p class="fs-3 fw-bold mb-0">{{ resumo.acerto }}%</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm p-3">
+                    <p class="text-body-secondary small mb-1"><i class="bi bi-calendar-event text-primary" aria-hidden="true"></i> Próxima prova</p>
+                    <p class="fs-3 fw-bold mb-0">{{ resumo.prova_data }}</p>
+                    <p class="text-body-secondary small mb-0">{{ resumo.prova_materia }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- O que revisar -->
+        <div class="d-flex justify-content-between align-items-end mb-3">
+            <h2 class="fs-4 fw-bold mb-0">O que revisar</h2>
+            <a href="{{ url_for('minhas_materias') }}">Ver todas as matérias</a>
+        </div>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-2 p-sm-3">
+                <div class="table-responsive">
+                    <table class="table align-middle mb-0">
+                        <caption>Matérias com acerto abaixo de 80% ou ainda sem estudos.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Matéria</th>
+                                <th scope="col" class="d-none d-md-table-cell">Próxima prova</th>
+                                <th scope="col">Acerto</th>
+                                <th scope="col">Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for materia in materias if materia.horas == 0 or materia.acerto < 80 %}
+                            <tr>
+                                <td class="fw-semibold">
+                                    <a href="{{ url_for('materia', id=materia.id) }}">{{ materia.nome }}</a>
+                                </td>
+                                <td class="d-none d-md-table-cell">{{ materia.prova }}</td>
+                                <td>
+                                    {% if materia.horas == 0 %}
+                                    —
+                                    {% else %}
+                                    {{ materia.acerto }}%
+                                    {% endif %}
+                                </td>
+                                <td>{% include '_partials/situacao.html' %}</td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="4" class="text-center py-4">
+                                    <p class="fw-semibold mb-1">Tudo em dia!</p>
+                                    <p class="text-body-secondary mb-0">Nenhuma matéria precisa de revisão agora.</p>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}

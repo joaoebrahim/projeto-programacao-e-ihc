@@ -56,6 +56,13 @@ materias = [
     },
 ]
 
+resumo = {
+    "horas": 15,
+    "acerto": 69,
+    "prova_data": "05/11/2026",
+    "prova_materia": "Probabilidade e Estatística"
+}
+
 
 @app.get("/")
 def home():
@@ -75,7 +82,7 @@ def cadastro():
 
 @app.get("/painel")
 def painel():
-    return render_template("painel.html")
+    return render_template("painel.html", materias=materias, resumo=resumo)
 
 @app.get("/materias")
 def minhas_materias():
